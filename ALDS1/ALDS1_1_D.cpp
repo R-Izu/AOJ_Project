@@ -15,16 +15,21 @@ int main()
         cin >> R[i];
     }
     int diff = -10000000000;
-    int diff_tmp;
+    int diff_tmp, R_tmp;
 
+    R_tmp = R[0];
     for (int i = 0; i < n-1; i++)
     {
-        for (int j=i+1; j < n; j++)
+        if (R_tmp >= R[i])
         {
-            diff_tmp = R[j] - R[i];
-            if (diff_tmp > diff)
+            R_tmp = R[i];
+            for (int j=i+1; j < n; j++)
             {
-                diff = diff_tmp;
+                diff_tmp = R[j] - R[i];
+                if (diff_tmp > diff)
+                {
+                    diff = diff_tmp;
+                }
             }
         }
     }
