@@ -1,5 +1,5 @@
-# environment
-.DS_Store
+# すべて無視
+*
 
-# Clion Setting
-.idea/
+# C++ファイルのみ許可
+!*.cpp
